@@ -11,4 +11,9 @@ class Order:
             raise TypeError("Coffee must be a Coffee instance")
         
         
-       
+        if not isinstance(price, (int, float)):
+            raise TypeError("Price must be a number")
+        if not (1.0 <= float(price) <= 10.0):
+            raise ValueError("Price must be between 1.0 and 10.0")
+            
+        
