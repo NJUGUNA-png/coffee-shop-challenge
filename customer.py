@@ -1,6 +1,6 @@
 class Customer:
     def _init_(self, name):
-        self._name = None
+    
         self.name = name  
         self._orders = []
 
@@ -15,5 +15,8 @@ class Customer:
         if not (1 <= len(value) <= 15):
             raise ValueError("Name must be between 1 and 15 characters")
         self._name = value
+
+    def orders(self):
+        return self._orders
 
     
